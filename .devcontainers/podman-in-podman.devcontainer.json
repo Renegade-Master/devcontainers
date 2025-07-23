@@ -1,0 +1,37 @@
+{
+    "name": "Podman-in-Podman",
+    "image": "quay.io/podman/stable:latest",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "upgradePackages": true
+        }
+    },
+    "containerUser": "podman",
+    "remoteUser": "podman",
+    "securityOpt": [
+        "label=disable",
+        "unmask=ALL"
+    ],
+    "runArgs": [
+        "--device=/dev/fuse"
+    ],
+    "privileged": false,
+    "customizations": {
+        "jetbrains": {
+            "backend": "IntelliJ"
+        }
+    },
+    "mounts": [
+        {
+            "source": "/dev/fuse",
+            "target": "/dev/fuse",
+            "type": "bind"
+        },
+        {
+            "source": "/home/user/.local/share/containers",
+            "target": "/home/podman/.local/share/containers",
+            "type": "bind"
+        }
+    ]
+}
