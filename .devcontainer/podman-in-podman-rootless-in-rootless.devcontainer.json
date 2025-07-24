@@ -9,5 +9,5 @@
     "securityOpt": [
         "label=disable"
     ],
-    "privileged": false,
+    "privileged": false
 }
