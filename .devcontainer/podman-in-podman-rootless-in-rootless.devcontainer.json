@@ -1,0 +1,13 @@
+{
+    "name": "Podman-in-Podman [Rootless in Rootless]",
+    "image": "quay.io/podman/stable:latest",
+    "containerUser": "podman",
+    "remoteUser": "podman",
+    "runArgs": [
+        "--device=/dev/fuse"
+    ],
+    "securityOpt": [
+        "label=disable"
+    ],
+    "privileged": false,
+}
