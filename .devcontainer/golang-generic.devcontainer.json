@@ -16,11 +16,11 @@
 
     "runArgs": ["--security-opt", "label=disable"],
     "mounts": [
-        "source=${localEnv:HOME}/.usrrc,target=/root/.usrrc,type=bind",
-        "source=${localEnv:HOME}/.gitconfig,target=/root/.gitconfig,type=bind",
-        "source=${localEnv:HOME}/.gitignore,target=/root/.gitignore,type=bind",
-        "source=${localEnv:HOME}/.gnupg/,target=/root/.gnupg/,type=bind",
-        "source=${localEnv:HOME}/.ssh/,target=/root/.ssh/,type=bind"
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.usrrc,target=/root/.usrrc,type=bind",
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/root/.gitconfig,type=bind",
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitignore,target=/root/.gitignore,type=bind",
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gnupg/,target=/root/.gnupg/,type=bind",
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh/,target=/root/.ssh/,type=bind"
     ],
 
     // Configure tool-specific properties.
