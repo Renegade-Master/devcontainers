@@ -1,11 +1,12 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/go .
 {
-    "name": "Go",
+    "name": "Generic Debian Golang DevContainer",
     // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
     "image": "mcr.microsoft.com/devcontainers/go:2-1.26",
 
     // Features to add to the dev container. More info: https://containers.dev/features.
+    // ToDo: https://github.com/devcontainers/templates/pull/390/
     // "features": {},
 
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -14,7 +15,11 @@
     // Use 'postCreateCommand' to run commands after the container is created.
     // "postCreateCommand": "go version",
 
-    "runArgs": ["--security-opt", "label=disable"],
+    "runArgs": [
+        "--privileged",
+        "--security-opt", "label=disable"
+    ],
+
     "mounts": [
         "source=${localEnv:HOME}${localEnv:USERPROFILE}/.usrrc,target=/root/.usrrc,type=bind",
         "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/root/.gitconfig,type=bind",
