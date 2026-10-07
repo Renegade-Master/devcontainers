@@ -13,7 +13,7 @@
     // "forwardPorts": [],
 
     // Use 'postCreateCommand' to run commands after the container is created.
-    // "postCreateCommand": "go version",
+    "postCreateCommand": "echo 'source /root/.usrrc' >> /root/.bashrc",
 
     "runArgs": [
         "--privileged",
