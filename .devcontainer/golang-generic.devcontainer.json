@@ -21,11 +21,14 @@
     ],
 
     "mounts": [
-        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.usrrc,target=/root/.usrrc,type=bind",
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.aws/crednentials,target=/root/.aws/crednentials,type=bind",
         "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/root/.gitconfig,type=bind",
         "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitignore,target=/root/.gitignore,type=bind",
         "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gnupg/,target=/root/.gnupg/,type=bind",
-        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh/,target=/root/.ssh/,type=bind"
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.local/bin/,target=/root/.local/bin/,type=bind",
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.netrc,target=/root/.netrc,type=bind",
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh/,target=/root/.ssh/,type=bind",
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.usrrc,target=/root/.usrrc,type=bind"
     ],
 
     // Configure tool-specific properties.
